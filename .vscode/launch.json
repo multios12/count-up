@@ -1,0 +1,25 @@
+{
+    // デバッグ実行のための情報を定義する
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug react",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "reAttach": true,
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "react-start",
+            "postDebugTask": "terminate-react-start",
+        },
+        {
+            "name": "debug express server",
+            "program": "${workspaceFolder}/srv/index.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        }
+    ]
+}
