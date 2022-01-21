@@ -18,4 +18,6 @@ app.get('/api/test', (req, res) => {
     res.send(JSON.stringify({ message: `Hello ${name}!` }));
 });
 
+app.use('/', express.static(__dirname + '/../build'));
+
 app.listen(3001, () => console.log('Express server is running on localhost:3001'));
